@@ -6,9 +6,9 @@ data "template_file" "certificates" {
       kubernetes_api_elb_dns_name = "${aws_elb.kubernetes_api.dns_name}"
       kubernetes_cluster_dns = "${var.kubernetes_cluster_dns}"
       etcd0_ip = "${aws_instance.etcd.0.private_ip}"
-      ...
+
       controller0_ip = "${aws_instance.controller.0.private_ip}"
-      ...
+      
       worker2_ip = "${aws_instance.worker.2.private_ip}"
     }
 }
