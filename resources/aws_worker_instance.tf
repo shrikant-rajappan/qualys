@@ -1,6 +1,5 @@
 resource "aws_instance" "worker" {
     count = 1
-    ...
     tags {
       Owner = "Lorenzo"
       Name = "worker-${count.index}"
