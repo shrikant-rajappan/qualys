@@ -29,6 +29,12 @@ resource "aws_instance" "controller" {
     }
 }
 
+##resource "aws_elb" "kubernetes_api" {
+##    name = "${var.elb_name}"
+##    instances = ["${aws_instance.controller.*.id}"]
+##    Name = "kubernetes-api"
+##  }
+##}
 ###############################
 ## Kubernetes API Load Balancer
 ###############################

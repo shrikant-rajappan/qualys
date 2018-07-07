@@ -35,23 +35,23 @@ resource "aws_security_group" "kubernetes" {
   }
 }
 
-resource "aws_security_group" "kubernetes_api" {
-  vpc_id = "${aws_vpc.kubernetes.id}"
-  name = "kubernetes-api"
+##resource "aws_security_group" "kubernetes_api" {
+##  vpc_id = "${aws_vpc.kubernetes.id}"
+##  name = "kubernetes-api"
 
-  # Allow inbound traffic to the port used by Kubernetes API HTTPS
-  ingress {
-    from_port = 6443
-    to_port = 6443
-    protocol = "TCP"
-    cidr_blocks = ["${var.control_cidr}"]
-  }
+##  # Allow inbound traffic to the port used by Kubernetes API HTTPS
+##  ingress {
+##    from_port = 6443
+##    to_port = 6443
+##    protocol = "TCP"
+##    cidr_blocks = ["${var.control_cidr}"]
+##  }
 
-  # Allow all outbound traffic
-  egress {
-    from_port = 0
-    to_port = 0
-    protocol = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-}
+##  # Allow all outbound traffic
+##  egress {
+##    from_port = 0
+##    to_port = 0
+##    protocol = "-1"
+##    cidr_blocks = ["0.0.0.0/0"]
+##  }
+##}
