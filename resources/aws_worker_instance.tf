@@ -8,4 +8,3 @@ resource "aws_instance" "worker" {
       ansibleNodeName = "worker${count.index}"
     }
   }
-}
