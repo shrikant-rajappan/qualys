@@ -7,7 +7,8 @@ resource "aws_security_group" "kubernetes" {
     from_port = 0
     to_port = 0
     protocol = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+    ##cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.43.0.1/16"]
   }
 
   # Allow all internal
